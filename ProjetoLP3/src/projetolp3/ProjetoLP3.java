@@ -18,6 +18,7 @@ public class ProjetoLP3 {
         System.out.println("Gui é um viadão");
         System.out.println("Alterado na web");
         System.out.println("ALTERAÇÃO 1");
+        System.out.println("Alteração 2");
     }
     
 }
