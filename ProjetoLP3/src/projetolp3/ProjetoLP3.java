@@ -15,12 +15,6 @@ public class ProjetoLP3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Gui é um viadão");
-        System.out.println("Alterado na web");
-        System.out.println("ALTERAÇÃO 1");
-        System.out.println("ALTERAÇÃO 2 ");
-        System.out.println("oi");
-        System.out.println("tchau");
     }
     
 }
