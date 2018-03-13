@@ -19,7 +19,6 @@ public class ProjetoLP3 {
         System.out.println("Alterado na web");
         System.out.println("ALTERAÇÃO 1");
         System.out.println("alteração 2 ");
-        System.out.println("commit");
     }
     
 }
