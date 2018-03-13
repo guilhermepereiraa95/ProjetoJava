@@ -20,6 +20,7 @@ public class ProjetoLP3 {
         System.out.println("ALTERAÇÃO 1");
         System.out.println("ALTERAÇÃO 2 ");
         System.out.println("oi");
+        System.out.println("tchau");
     }
     
 }
