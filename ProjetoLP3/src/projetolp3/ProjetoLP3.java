@@ -15,6 +15,8 @@ public class ProjetoLP3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        TelaInicia obj1 = new TelaInicia();
+        obj1.setVisible(true);
     }
     
 }
