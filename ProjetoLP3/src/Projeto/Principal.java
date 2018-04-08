@@ -5,6 +5,8 @@
  */
 package Projeto;
 
+import java.util.Locale;
+
 /**
  *
  * @author Guilherme
@@ -75,6 +77,13 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem2);
+
+        jMenuItem7.setText("Consulta");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem7);
 
         jMenuBar1.add(jMenu1);
@@ -168,10 +177,17 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_PrincipalComponentShown
 
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        Consulta consulta = new Consulta();
+        Principal.add(consulta);
+        consulta.setVisible(true);  
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
         /* Set the Nimbus look and feel */
         
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
