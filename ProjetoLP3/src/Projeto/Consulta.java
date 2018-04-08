@@ -36,7 +36,6 @@ public class Consulta extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
-        setMaximizable(true);
         setResizable(true);
         setTitle("Consulta de Produtos");
 

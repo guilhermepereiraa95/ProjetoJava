@@ -29,6 +29,9 @@ public class NovaVenda extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
 
+        setClosable(true);
+        setIconifiable(true);
+        setResizable(true);
         setTitle("Novas Vendas");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));

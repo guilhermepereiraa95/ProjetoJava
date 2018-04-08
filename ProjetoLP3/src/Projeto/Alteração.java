@@ -45,7 +45,6 @@ public class Alteração extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
-        setMaximizable(true);
         setResizable(true);
         setTitle("Alteração de Produtos");
 
