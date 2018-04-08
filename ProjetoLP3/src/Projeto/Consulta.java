@@ -36,7 +36,6 @@ public class Consulta extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
-        setResizable(true);
         setTitle("Consulta de Produtos");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));

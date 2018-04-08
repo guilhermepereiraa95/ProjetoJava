@@ -50,15 +50,17 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         Principal.setAutoscrolls(true);
+        Principal.setFocusable(false);
         Principal.setMinimumSize(new java.awt.Dimension(1024, 600));
         Principal.setName(""); // NOI18N
+        Principal.setPreferredSize(null);
         Principal.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 PrincipalComponentShown(evt);
             }
         });
         getContentPane().add(Principal);
-        Principal.setBounds(0, 0, 1024, 600);
+        Principal.setBounds(0, 0, 1024, 700);
 
         jMenu1.setText("Produtos");
 
@@ -129,8 +131,9 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
+        jMenuBar1.getAccessibleContext().setAccessibleParent(Principal);
 
-        setBounds(0, 0, 497, 426);
+        setBounds(0, 0, 562, 456);
     }// </editor-fold>//GEN-END:initComponents
     
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed

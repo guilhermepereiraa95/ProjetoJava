@@ -45,7 +45,6 @@ public class Cadastro extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
-        setResizable(true);
         setTitle("Cadastro de Produtos");
 
         jButton1.setText("Salvar");

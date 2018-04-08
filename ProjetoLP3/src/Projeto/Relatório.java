@@ -29,7 +29,6 @@ public class Relatório extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
-        setResizable(true);
         setTitle("Relatório de Vendas");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
