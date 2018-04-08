@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package Projeto;
+import java.lang.Exception;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -178,22 +180,22 @@ public class Cadastro extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(254, 254, 254))
-            .addGroup(layout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(45, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(253, 253, 253))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(36, 36, 36))
+                .addGap(47, 47, 47))
         );
 
         pack();
@@ -204,6 +206,7 @@ public class Cadastro extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTextField6ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try{
         int cod = Integer.parseInt(jTextField1.getText());
         String nome = jTextField2.getText();
         String marca = jTextField6.getText();
@@ -212,6 +215,9 @@ public class Cadastro extends javax.swing.JInternalFrame {
         float preco_uni = Float.parseFloat(jTextField5.getText());
         float preco_t = preco_uni*qtd_garrafas;
         produto = new Produto(cod,nome,marca,qtd_garrafas,litros_g,preco_uni,preco_t);
+        }catch(NumberFormatException ex){
+            JOptionPane.showMessageDialog(null, "Há informações erradas ou faltando.\nErro: "+ex.toString());
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
