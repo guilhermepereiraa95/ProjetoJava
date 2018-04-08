@@ -35,6 +35,7 @@ public class Principal extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
@@ -47,7 +48,13 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         Principal.setAutoscrolls(true);
+        Principal.setMinimumSize(new java.awt.Dimension(1024, 600));
         Principal.setName(""); // NOI18N
+        Principal.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PrincipalComponentShown(evt);
+            }
+        });
         getContentPane().add(Principal);
         Principal.setBounds(0, 0, 1024, 600);
 
@@ -68,6 +75,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem2);
+        jMenu1.add(jMenuItem7);
 
         jMenuBar1.add(jMenu1);
 
@@ -113,9 +121,9 @@ public class Principal extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        setBounds(0, 0, 655, 506);
+        setBounds(0, 0, 497, 426);
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         Cadastro cadastro = new Cadastro();
         Principal.add(cadastro);
@@ -156,11 +164,16 @@ public class Principal extends javax.swing.JFrame {
         cvenda.setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
+    private void PrincipalComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PrincipalComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PrincipalComponentShown
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
+        
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -186,7 +199,8 @@ public class Principal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Principal().setVisible(true);
+                new Principal().setVisible(true);   
+                
             }
         });
     }
@@ -203,5 +217,6 @@ public class Principal extends javax.swing.JFrame {
     javax.swing.JMenuItem jMenuItem4;
     javax.swing.JMenuItem jMenuItem5;
     javax.swing.JMenuItem jMenuItem6;
+    javax.swing.JMenuItem jMenuItem7;
     // End of variables declaration//GEN-END:variables
 }
