@@ -30,7 +30,6 @@ public class Produto {
      this.custo_unitario = custo_uni;
      this.custo_total=custo_t;     
      this.litragem_lote = litragem_total;
-     
     }
 
     public int getCodigo() {
