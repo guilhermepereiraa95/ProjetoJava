@@ -21,6 +21,7 @@ public class Principal extends javax.swing.JFrame {
         this.setExtendedState(MAXIMIZED_BOTH);
         
         
+        
     }
 
     /**
@@ -51,16 +52,28 @@ public class Principal extends javax.swing.JFrame {
 
         Principal.setAutoscrolls(true);
         Principal.setFocusable(false);
-        Principal.setMinimumSize(new java.awt.Dimension(1024, 600));
+        Principal.setMaximumSize(null);
+        Principal.setMinimumSize(null);
         Principal.setName(""); // NOI18N
-        Principal.setPreferredSize(null);
         Principal.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 PrincipalComponentShown(evt);
             }
         });
+
+        javax.swing.GroupLayout PrincipalLayout = new javax.swing.GroupLayout(Principal);
+        Principal.setLayout(PrincipalLayout);
+        PrincipalLayout.setHorizontalGroup(
+            PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1454, Short.MAX_VALUE)
+        );
+        PrincipalLayout.setVerticalGroup(
+            PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 713, Short.MAX_VALUE)
+        );
+
         getContentPane().add(Principal);
-        Principal.setBounds(0, 0, 1024, 700);
+        Principal.setBounds(0, 0, 1454, 713);
 
         jMenu1.setText("Produtos");
 
@@ -133,7 +146,7 @@ public class Principal extends javax.swing.JFrame {
         setJMenuBar(jMenuBar1);
         jMenuBar1.getAccessibleContext().setAccessibleParent(Principal);
 
-        setBounds(0, 0, 562, 456);
+        setBounds(0, 0, 537, 451);
     }// </editor-fold>//GEN-END:initComponents
     
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -178,6 +191,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void PrincipalComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PrincipalComponentShown
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_PrincipalComponentShown
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
