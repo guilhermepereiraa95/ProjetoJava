@@ -65,15 +65,15 @@ public class Principal extends javax.swing.JFrame {
         Principal.setLayout(PrincipalLayout);
         PrincipalLayout.setHorizontalGroup(
             PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1454, Short.MAX_VALUE)
+            .addGap(0, 1417, Short.MAX_VALUE)
         );
         PrincipalLayout.setVerticalGroup(
             PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 713, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
         );
 
         getContentPane().add(Principal);
-        Principal.setBounds(0, 0, 1454, 713);
+        Principal.setBounds(0, 0, 1417, 715);
 
         jMenu1.setText("Produtos");
 
