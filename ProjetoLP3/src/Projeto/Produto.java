@@ -21,7 +21,7 @@ public class Produto {
     private float litragem_lote;
 
     
-    public Produto(int cod, String nome, String marca, int qtd_g, float qtd_l, float custo_uni,float custo_t){
+    public Produto(int cod, String nome, String marca, int qtd_g, float qtd_l, float custo_uni,float custo_t, float litragem_total){
      this.codigo = cod;
      this.nome = nome;
      this.marca = marca;
@@ -29,7 +29,7 @@ public class Produto {
      this.qtd_litros = qtd_l;
      this.custo_unitario = custo_uni;
      this.custo_total=custo_t;     
-     this.litragem_lote = qtd_l*qtd_g;
+     this.litragem_lote = litragem_total;
      
     }
 

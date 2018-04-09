@@ -207,14 +207,12 @@ public class Cadastro extends javax.swing.JInternalFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try{
-        int cod = Integer.parseInt(jTextField1.getText());
-        String nome = jTextField2.getText();
-        String marca = jTextField6.getText();
-        float litros_g = Float.parseFloat(jTextField3.getText());
-        int qtd_garrafas = Integer.parseInt(jTextField4.getText());
-        float preco_uni = Float.parseFloat(jTextField5.getText());
-        float preco_t = preco_uni*qtd_garrafas;
-        produto = new Produto(cod,nome,marca,qtd_garrafas,litros_g,preco_uni,preco_t);
+        produto.setCodigo(Integer.parseInt(jTextField1.getText()));
+        produto.setNome(jTextField2.getText());
+        produto.setMarca(jTextField6.getText());
+        produto.setQtd_litros(Float.parseFloat(jTextField3.getText()));
+        produto.setQtd_garrafas(Integer.parseInt(jTextField4.getText()));
+        produto.setCusto_unitario(Float.parseFloat(jTextField5.getText()));
         }catch(NumberFormatException ex){
             JOptionPane.showMessageDialog(null, "Há informações erradas ou faltando.\nErro: "+ex.toString());
         }
