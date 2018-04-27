@@ -169,7 +169,7 @@ public class Principal extends javax.swing.JFrame {
         setJMenuBar(jMenuBar1);
         jMenuBar1.getAccessibleContext().setAccessibleParent(Principal);
 
-        setBounds(0, 0, 537, 451);
+        setBounds(0, 0, 848, 606);
     }// </editor-fold>//GEN-END:initComponents
     
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
