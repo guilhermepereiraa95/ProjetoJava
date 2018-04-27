@@ -19,7 +19,6 @@ public class Produto {
     private float custo_unitario;
     private float custo_total;
     private float litragem_lote;
-
     
     public Produto(int cod, String nome, String marca, int qtd_g, float qtd_l, float custo_uni,float custo_t, float litragem_total){
      this.codigo = cod;
