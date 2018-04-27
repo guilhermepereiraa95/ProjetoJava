@@ -3,8 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Projeto;
+package Classes;
 
+import Telas.Relatório;
+import Telas.Consulta;
+import Telas.Encomenda;
+import Telas.ConsultaVenda;
+import Telas.Cadastro;
+import Telas.Alteração;
+import Telas.NovaVenda;
 import javax.swing.JOptionPane;
 
 /**
@@ -75,7 +82,7 @@ public class Principal extends javax.swing.JFrame {
         );
 
         getContentPane().add(Principal);
-        Principal.setBounds(0, 0, 1417, 715);
+        Principal.setBounds(0, 0, 0, 0);
 
         jMenu1.setText("Produtos");
 
