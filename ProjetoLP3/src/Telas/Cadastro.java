@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Telas;
+import Classes.Produto;
 import java.lang.Exception;
 import javax.swing.JOptionPane;
 
