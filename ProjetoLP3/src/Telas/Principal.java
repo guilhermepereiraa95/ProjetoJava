@@ -5,13 +5,7 @@
  */
 package Telas;
 
-import Telas.Relatório;
-import Telas.Consulta;
-import Telas.Encomenda;
-import Telas.ConsultaVenda;
-import Telas.Cadastro;
-import Telas.Alteração;
-import Telas.NovaVenda;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -26,6 +20,7 @@ public class Principal extends javax.swing.JFrame {
     public Principal() {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
+        
         
         
         
@@ -74,15 +69,15 @@ public class Principal extends javax.swing.JFrame {
         Principal.setLayout(PrincipalLayout);
         PrincipalLayout.setHorizontalGroup(
             PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1417, Short.MAX_VALUE)
+            .addGap(0, 1285, Short.MAX_VALUE)
         );
         PrincipalLayout.setVerticalGroup(
             PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 715, Short.MAX_VALUE)
+            .addGap(0, 714, Short.MAX_VALUE)
         );
 
         getContentPane().add(Principal);
-        Principal.setBounds(0, 0, 0, 0);
+        Principal.setBounds(0, 0, 1285, 714);
 
         jMenu1.setText("Produtos");
 
@@ -276,11 +271,8 @@ public class Principal extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Principal().setVisible(true);   
-                
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Principal().setVisible(true);
         });
     }
 
