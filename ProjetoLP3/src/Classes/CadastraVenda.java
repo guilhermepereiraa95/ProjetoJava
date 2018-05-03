@@ -11,7 +11,7 @@ package Classes;
  */
 public class CadastraVenda {
         private String nomeProduto, marca;
-        private int quantidade;
+        private int quantidade, codigo;
         private double valor, litros;
 
         
