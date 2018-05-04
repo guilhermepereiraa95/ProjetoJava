@@ -58,7 +58,7 @@ public class Alteração extends javax.swing.JInternalFrame {
             }
         });
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
 
         jTextField1.setEnabled(false);
 
@@ -232,7 +232,7 @@ public class Alteração extends javax.swing.JInternalFrame {
                 .addGap(90, 90, 90))
         );
 
-        setBounds(0, 0, 572, 285);
+        setBounds(0, 0, 572, 311);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
