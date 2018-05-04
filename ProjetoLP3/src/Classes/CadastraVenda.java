@@ -14,10 +14,27 @@ import java.sql.Date;
 public class CadastraVenda extends Produto {
         
     private Date data;
+    private float subtotal;
     
     public CadastraVenda(int codigo, String nome, int quantidade, double volume, float preço) {
         super(codigo, nome, quantidade, volume, preço);
         
+    }
+
+    public Date getData() {
+        return data;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
+
+    public float getSubTotal() {
+        return subtotal;
+    }
+
+    public void setSubTotal(float subtotal) {
+        this.subtotal = subtotal;
     }
         
 
