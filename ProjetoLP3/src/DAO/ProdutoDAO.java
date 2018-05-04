@@ -5,7 +5,9 @@
  */
 package DAO;
 
+import Classes.Produto;
 import Connection.Conexao;
+import java.awt.List;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -18,20 +20,24 @@ import java.util.logging.Logger;
  */
 public class ProdutoDAO {
     
-    public void create(){
+    public void create(Produto produto){
         Connection con = Conexao.getConnection();
         PreparedStatement stmt = null;
         
         try {
-            stmt = con.prepareStatement("");
+            stmt = con.prepareStatement("insert into produtos ()values()");
         } catch (SQLException ex) {
             Logger.getLogger(ProdutoDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
     }
-    
-    public void read(){
+    /**
+     *
+     * @return
+     */
+    public List read(){
+        
+        
+        return null;
     
     }
     

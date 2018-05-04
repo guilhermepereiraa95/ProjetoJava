@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Telas;
+import DAO.ProdutoDAO;
 import Classes.Produto;
 import java.lang.Exception;
 import javax.swing.JOptionPane;
@@ -237,7 +238,9 @@ public class Cadastro extends javax.swing.JInternalFrame {
         produto.setQtd_litros(Float.parseFloat(jTextField3.getText()));
         produto.setQtd_garrafas(Integer.parseInt(jTextField4.getText()));
         produto.setCusto_unitario(Float.parseFloat(jTextField5.getText()));
-        
+        ProdutoDAO dao;
+        dao = new ProdutoDAO();
+        dao.create(produto);
         //inserir novo lote de produto no banco
         }catch(NumberFormatException ex){
             JOptionPane.showMessageDialog(null, "Há informações erradas ou faltando.\nErro: "+ex.toString());
