@@ -11,15 +11,26 @@ import java.sql.Date;
  *
  * @author ivanf
  */
-public class Encomendas extends Produto {
+public class Encomendas extends CadastraVenda {
     
     //Atributos
     private Date data;
-    
-    
-    
-    public Encomendas(int codigo, String nome, int quantidade, double volume, float preço) {
+
+    public Encomendas(Date data, int codigo, String nome, int quantidade, double volume, float preço) {
         super(codigo, nome, quantidade, volume, preço);
+        this.data = data;
     }
+
+    public Date getData() {
+        return data;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
+    
+    
+    
+   
     
 }
