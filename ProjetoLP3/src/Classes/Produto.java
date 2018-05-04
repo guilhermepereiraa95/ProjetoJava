@@ -14,15 +14,19 @@ public class Produto {
     private int codigo;
     private String nome;
     private int quantidade;
-    private double volume;
+    private float volume;
     private float preço;
 
-    public Produto(int codigo, String nome, int quantidade, double volume, float preço) {
+    public Produto(int codigo, String nome, int quantidade, float volume, float preço) {
         this.codigo = codigo;
         this.nome = nome;
         this.quantidade = quantidade;
         this.volume = volume;
         this.preço = preço;
+    }
+
+    public Produto() {
+        
     }
 
     public int getCodigo() {
@@ -49,11 +53,11 @@ public class Produto {
         this.quantidade = quantidade;
     }
 
-    public double getVolume() {
+    public float getVolume() {
         return volume;
     }
 
-    public void setVolume(double volume) {
+    public void setVolume(float volume) {
         this.volume = volume;
     }
 

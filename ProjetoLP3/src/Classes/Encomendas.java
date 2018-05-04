@@ -16,7 +16,7 @@ public class Encomendas extends CadastraVenda {
     //Atributos
     private Date dataEntrega;
 
-    public Encomendas(Date dataEntrega, int codigo, String nome, int quantidade, double volume, float preço) {
+    public Encomendas(Date dataEntrega, int codigo, String nome, int quantidade, float volume, float preço) {
         super(codigo, nome, quantidade, volume, preço);
         this.dataEntrega = dataEntrega;
     }

@@ -13,7 +13,7 @@ public class FinalizaVenda extends CadastraVenda{
         private float total, desconto;
         private String formaPagamento;
 
-    public FinalizaVenda(float total, float desconto, String formaPagamento, int codigo, String nome, int quantidade, double volume, float preço) {
+    public FinalizaVenda(float total, float desconto, String formaPagamento, int codigo, String nome, int quantidade, float volume, float preço) {
         super(codigo, nome, quantidade, volume, preço);
         this.total = total;
         this.desconto = desconto;

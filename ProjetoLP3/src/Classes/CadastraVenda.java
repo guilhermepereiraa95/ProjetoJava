@@ -16,7 +16,7 @@ public class CadastraVenda extends Produto {
     private Date data;
     private float subtotal;
     
-    public CadastraVenda(int codigo, String nome, int quantidade, double volume, float preço) {
+    public CadastraVenda(int codigo, String nome, int quantidade, float volume, float preço) {
         super(codigo, nome, quantidade, volume, preço);
         
     }

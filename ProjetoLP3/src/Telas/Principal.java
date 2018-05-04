@@ -6,6 +6,8 @@
 package Telas;
 
 
+import Connection.Conexao;
+import java.sql.Connection;
 import javax.swing.JOptionPane;
 
 /**
@@ -21,7 +23,12 @@ public class Principal extends javax.swing.JFrame {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
         
-        
+        try{
+            Connection con = Conexao.getConnection();
+        } catch(Exception ex){
+            System.out.println(ex);
+        }
+            
         
         
     }
