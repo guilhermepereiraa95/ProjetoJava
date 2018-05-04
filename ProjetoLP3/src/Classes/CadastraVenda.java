@@ -5,56 +5,40 @@
  */
 package Classes;
 
+import java.sql.Date;
+
 /**
  *
  * @author guifv
  */
-public class CadastraVenda {
-        private String nomeProduto, marca;
-        private int quantidade, codigo;
-        private double valor, litros;
-
+public class CadastraVenda extends Produto {
         
+    private Date data;
+    private float subtotal;
+    
+    public CadastraVenda(int codigo, String nome, int quantidade, float volume, float preço) {
+        super(codigo, nome, quantidade, volume, preço);
         
-    public String getNomeProduto() {
-        return nomeProduto;
     }
 
-    public void setNomeProduto(String nomeProduto) {
-        this.nomeProduto = nomeProduto;
+    public Date getData() {
+        return data;
     }
 
-    public String getMarca() {
-        return marca;
+    public void setData(Date data) {
+        this.data = data;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public float getSubTotal() {
+        return subtotal;
     }
 
-    public int getQuantidade() {
-        return quantidade;
+    public void setSubTotal(float subtotal) {
+        this.subtotal = subtotal;
     }
+        
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public double getValor() {
-        return valor;
-    }
-
-    public void setValor(double valor) {
-        this.valor = valor;
-    }
-
-    public double getLitros() {
-        return litros;
-    }
-
-    public void setLitros(double litros) {
-        this.litros = litros;
-    }
+    
         
         
          

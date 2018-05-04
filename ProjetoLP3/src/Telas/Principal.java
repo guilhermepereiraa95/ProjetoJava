@@ -6,6 +6,8 @@
 package Telas;
 
 
+import Connection.Conexao;
+import java.sql.Connection;
 import javax.swing.JOptionPane;
 
 /**
@@ -21,7 +23,12 @@ public class Principal extends javax.swing.JFrame {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
         
-        
+        try{
+            Connection con = Conexao.getConnection();
+        } catch(Exception ex){
+            System.out.println(ex);
+        }
+            
         
         
     }
@@ -47,6 +54,7 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenu5 = new javax.swing.JMenu();
 
@@ -69,15 +77,15 @@ public class Principal extends javax.swing.JFrame {
         Principal.setLayout(PrincipalLayout);
         PrincipalLayout.setHorizontalGroup(
             PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1285, Short.MAX_VALUE)
+            .addGap(0, 1480, Short.MAX_VALUE)
         );
         PrincipalLayout.setVerticalGroup(
             PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 714, Short.MAX_VALUE)
+            .addGap(0, 820, Short.MAX_VALUE)
         );
 
         getContentPane().add(Principal);
-        Principal.setBounds(0, 0, 1285, 714);
+        Principal.setBounds(0, 0, 1480, 820);
 
         jMenu1.setText("Produtos");
 
@@ -137,13 +145,21 @@ public class Principal extends javax.swing.JFrame {
 
         jMenu3.setText("Clientes");
 
-        jMenuItem3.setText("Encomendas");
+        jMenuItem3.setText("Cadastar Encomendas");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);
             }
         });
         jMenu3.add(jMenuItem3);
+
+        jMenuItem8.setText("Consultar Encomendas");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem8);
 
         jMenuBar1.add(jMenu3);
 
@@ -171,7 +187,8 @@ public class Principal extends javax.swing.JFrame {
         setJMenuBar(jMenuBar1);
         jMenuBar1.getAccessibleContext().setAccessibleParent(Principal);
 
-        setBounds(0, 0, 848, 606);
+        setSize(new java.awt.Dimension(1504, 863));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -241,6 +258,10 @@ public class Principal extends javax.swing.JFrame {
         System.exit(0);  // TODO add your handling code here:
     }//GEN-LAST:event_jMenu5MouseClicked
 
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        // Tela de Consulta de Encomendas:
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -291,5 +312,6 @@ public class Principal extends javax.swing.JFrame {
     javax.swing.JMenuItem jMenuItem5;
     javax.swing.JMenuItem jMenuItem6;
     javax.swing.JMenuItem jMenuItem7;
+    javax.swing.JMenuItem jMenuItem8;
     // End of variables declaration//GEN-END:variables
 }

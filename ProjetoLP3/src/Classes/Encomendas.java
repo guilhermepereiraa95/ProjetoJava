@@ -5,10 +5,35 @@
  */
 package Classes;
 
+import java.sql.Date;
+
 /**
  *
  * @author ivanf
  */
-public class Encomendas {
+public class Encomendas extends CadastraVenda {
+    
+    //Atributos
+    private Date dataEntrega;
+
+    public Encomendas(Date dataEntrega, int codigo, String nome, int quantidade, float volume, float preço) {
+        super(codigo, nome, quantidade, volume, preço);
+        this.dataEntrega = dataEntrega;
+    }
+
+    public Date getDataEntrega() {
+        return dataEntrega;
+    }
+
+    public void setDataEntrega(Date dataEntrega) {
+        this.dataEntrega = dataEntrega;
+    }
+
+   
+    
+    
+    
+    
+   
     
 }
