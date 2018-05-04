@@ -5,10 +5,21 @@
  */
 package Classes;
 
+import java.sql.Date;
+
 /**
  *
  * @author ivanf
  */
-public class Encomendas {
+public class Encomendas extends Produto {
+    
+    //Atributos
+    private Date data;
+    
+    
+    
+    public Encomendas(int codigo, String nome, int quantidade, double volume, float preço) {
+        super(codigo, nome, quantidade, volume, preço);
+    }
     
 }
