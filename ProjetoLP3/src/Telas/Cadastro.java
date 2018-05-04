@@ -234,10 +234,10 @@ public class Cadastro extends javax.swing.JInternalFrame {
         try{
         produto.setCodigo(Integer.parseInt(jTextField1.getText()));
         produto.setNome(jTextField2.getText());
-        produto.setMarca(jTextField6.getText());
-        produto.setQtd_litros(Float.parseFloat(jTextField3.getText()));
-        produto.setQtd_garrafas(Integer.parseInt(jTextField4.getText()));
-        produto.setCusto_unitario(Float.parseFloat(jTextField5.getText()));
+        //produto.setMarca(jTextField6.getText());
+        //produto.setQtd_litros(Float.parseFloat(jTextField3.getText()));
+        //produto.setQtd_garrafas(Integer.parseInt(jTextField4.getText()));
+        //produto.setCusto_unitario(Float.parseFloat(jTextField5.getText()));
         ProdutoDAO dao;
         dao = new ProdutoDAO();
         dao.create(produto);
