@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 public class Conexao {
     
     private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String URL ="jdbc:mysql://localhost:3306/dbprojeto";
+    private static final String URL ="jdbc:mysql://localhost:3306/dbprojeto?autoReconnect=true&useSSL=false";
     private static final String USER="root";
     private static final String PASSWORD = "";
     
@@ -28,7 +28,7 @@ public class Conexao {
             Class.forName(DRIVER);
             return DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (ClassNotFoundException |SQLException ex) {
-            throw new RuntimeException("Erro na conexão com o banco de dados\n",ex);
+            throw new RuntimeException("Erro na conexão com o banco de dados\n" + ex);
         }
     }
     
