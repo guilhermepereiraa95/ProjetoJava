@@ -8,6 +8,7 @@ import DAO.ProdutoDAO;
 import Classes.Produto;
 import java.lang.Exception;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -21,8 +22,27 @@ public class Cadastro extends javax.swing.JInternalFrame {
      */
     public Cadastro() {
         initComponents();
+        atualizaTabela();
     }
 
+    public void atualizaTabela(){
+        DefaultTableModel modelo = (DefaultTableModel) tbl_tabelaCadastro.getModel();
+        modelo.setNumRows(0);
+        ProdutoDAO pdao = new ProdutoDAO();
+        
+        for(Produto p: pdao.read())
+        {
+            modelo.addRow(new Object[]
+            {
+                p.getCodigo(),
+                p.getNome(),
+                p.getQuantidade(),
+                p.getVolume(),
+                p.getPreço(),
+            });
+        }
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -46,7 +66,7 @@ public class Cadastro extends javax.swing.JInternalFrame {
         jLabel7 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tbl_tabelaCadastro = new javax.swing.JTable();
 
         setClosable(true);
         setIconifiable(true);
@@ -172,18 +192,23 @@ public class Cadastro extends javax.swing.JInternalFrame {
                 .addGap(22, 22, 22))
         );
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_tabelaCadastro.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Código", "Produto", "Quantidade", "Volume", "Preço"
             }
-        ));
-        jScrollPane1.setViewportView(jTable1);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tbl_tabelaCadastro);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -211,20 +236,22 @@ public class Cadastro extends javax.swing.JInternalFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try{
-        produto = new Produto();
-        produto.setCodigo(Integer.parseInt(jTextField1.getText()));
-        produto.setNome(jTextField2.getText());
-        produto.setVolume(Float.parseFloat(jTextField3.getText()));
-        produto.setQuantidade(Integer.parseInt(jTextField4.getText()));
-        produto.setPreço(Float.parseFloat(jTextField5.getText()));
-        ProdutoDAO dao;
-        dao = new ProdutoDAO();
+            produto = new Produto();
+            produto.setCodigo(Integer.parseInt(jTextField1.getText()));
+            produto.setNome(jTextField2.getText());
+            produto.setVolume(Float.parseFloat(jTextField3.getText()));
+            produto.setQuantidade(Integer.parseInt(jTextField4.getText()));
+            produto.setPreço(Float.parseFloat(jTextField5.getText()));
+            ProdutoDAO dao;
+            dao = new ProdutoDAO();
+            dao.create(produto);
         //dao.create(produto);
         //inserir novo lote de produto no banco
         }catch(NumberFormatException ex){
-            JOptionPane.showMessageDialog(null, "Há informações erradas ou faltando.\nErro: "+ex.toString());
+            JOptionPane.showMessageDialog(null, "Há informações erradas ou faltando.\nErro: "+ex);
         }
         
+        atualizaTabela();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -254,11 +281,11 @@ public class Cadastro extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTable tbl_tabelaCadastro;
     // End of variables declaration//GEN-END:variables
 }
