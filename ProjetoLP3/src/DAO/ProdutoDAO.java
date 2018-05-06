@@ -110,6 +110,18 @@ public class ProdutoDAO {
     
     
     public void delete(){
+        Connection con = Conexao.getConnection();
+        PreparedStatement stmt = null;
+        try{
+            stmt = con.prepareStatement("delete * from produtos where codigo =?");
+            stmt.setInt(1,p.getCodigo());
+            stmt.executeUpdate();
+            System.out.println("Deletado!");
+        }catch(SQLException ex){
+            System.out.println("Erro de conexão!\n"+ex);
+        }finally{
+            Conexao.closeConnection(con,stmt);
+        }
     
     }
 }
