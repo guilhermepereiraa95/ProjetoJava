@@ -16,9 +16,11 @@ public class Encomendas extends CadastraVenda {
     //Atributos
     private Date dataEntrega;
 
-    public Encomendas(Date dataEntrega, int codigo, String nome, int quantidade, float volume, float preço) {
-        super(codigo, nome, quantidade, volume, preço);
-        this.dataEntrega = dataEntrega;
+    public Encomendas(Date data, float subtotal, float total, float desconto, float preço, float volume, String nome, String formaPagamento, int codigo, int quantidade) {
+        super(data, subtotal, total, desconto, preço, volume, nome, formaPagamento, codigo, quantidade);
+    }
+
+    public Encomendas() {
     }
 
     public Date getDataEntrega() {
@@ -28,12 +30,7 @@ public class Encomendas extends CadastraVenda {
     public void setDataEntrega(Date dataEntrega) {
         this.dataEntrega = dataEntrega;
     }
-
    
     
-    
-    
-    
-   
     
 }
