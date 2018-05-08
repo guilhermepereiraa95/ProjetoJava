@@ -113,7 +113,7 @@ public class ProdutoDAO {
         Connection con = Conexao.getConnection();
         PreparedStatement stmt = null;
         try{
-            stmt = con.prepareStatement("delete * from produtos where codigo =?");
+            stmt = con.prepareStatement("delete * from produto where codigo =?");
             stmt.setInt(1,p.getCodigo());
             stmt.executeUpdate();
             System.out.println("Deletado!");
