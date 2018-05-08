@@ -199,22 +199,21 @@ public class Cadastro extends javax.swing.JInternalFrame {
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
-        Produto produto;
+        
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
         try{
-            produto = new Produto();
+            Produto produto = new Produto();
+            ProdutoDAO dao = new ProdutoDAO();
             produto.setCodigo(Integer.parseInt(jTextField1.getText()));
             produto.setNome(jTextField2.getText());
             produto.setVolume(Float.parseFloat(jTextField5.getText()));
             produto.setQuantidade(Integer.parseInt(jTextField4.getText()));
             produto.setPreço(Float.parseFloat(jTextField6.getText()));
-            ProdutoDAO dao;
-            dao = new ProdutoDAO();
             dao.create(produto);
-        //dao.create(produto);
-        //inserir novo lote de produto no banco
+            
+            JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
         }catch(NumberFormatException ex){
             JOptionPane.showMessageDialog(null, "Há informações erradas ou faltando.\nErro: "+ex);
         }

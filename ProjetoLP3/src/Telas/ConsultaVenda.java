@@ -56,7 +56,7 @@ public class ConsultaVenda extends javax.swing.JInternalFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Código", "Produto", "Qauntidade", "Valor", "Data de Venda"
+                "Código", "Produto", "Quantidade", "Valor", "Data de Venda"
             }
         ));
         jScrollPane1.setViewportView(jTable1);

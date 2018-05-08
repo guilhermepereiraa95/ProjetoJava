@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Guilherme
@@ -19,15 +20,17 @@ import java.util.logging.Logger;
 public class Conexao {
     
     private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String URL ="jdbc:mysql://localhost:3306/dbprojeto?autoReconnect=true&useSSL=false";
+    private static final String URL ="jdbc:mysql://localhost:3306/dbprojeto";
     private static final String USER="root";
-    private static final String PASSWORD = "";
+    private static final String PASSWORD = "guilherme";
     
     public static Connection getConnection(){
         try {
             Class.forName(DRIVER);
             return DriverManager.getConnection(URL, USER, PASSWORD);
+            
         } catch (ClassNotFoundException |SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.toString());
             throw new RuntimeException("Erro na conexão com o banco de dados\n" + ex);
         }
     }

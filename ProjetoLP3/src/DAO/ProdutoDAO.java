@@ -7,6 +7,7 @@ package DAO;
 
 import Classes.Produto;
 import Connection.Conexao;
+import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -30,13 +31,14 @@ public class ProdutoDAO {
         try {
             
             stmt = con.prepareStatement("insert into produto (codigo, nome, quantidade, volume, preco) values(?,?,?,?,?)");
+            
             stmt.setInt(1, produto.getCodigo());
             stmt.setString(2,produto.getNome());
             stmt.setInt( 3, produto.getQuantidade());
             stmt.setFloat(4, produto.getVolume());
             stmt.setFloat(5, produto.getPreço());
+            
             stmt.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
         } catch (SQLException ex) {
             Logger.getLogger(ProdutoDAO.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Problema na conexão com o BD! " + ex);
@@ -60,11 +62,10 @@ public class ProdutoDAO {
             
             stmt.executeUpdate();
             
-            JOptionPane.showMessageDialog(null, "Atualizado com sucesso!");
         } catch (SQLException ex) {
             Logger.getLogger(ProdutoDAO.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Problema na conexão com o BD! " + ex);
-        } catch(Exception ex){
+        } catch(HeadlessException ex){
             JOptionPane.showMessageDialog(null, "Problema na conexão com o BD! " + ex);
         }finally{
             Conexao.closeConnection(con, stmt);
