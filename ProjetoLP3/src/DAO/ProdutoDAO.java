@@ -39,6 +39,8 @@ public class ProdutoDAO {
             stmt.setFloat(5, produto.getPreço());
             
             stmt.executeUpdate();
+            
+            JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
         } catch (SQLException ex) {
             Logger.getLogger(ProdutoDAO.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Problema na conexão com o BD! " + ex);

@@ -5,6 +5,8 @@
  */
 package Telas;
 
+import Classes.Produto;
+import DAO.ProdutoDAO;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -19,8 +21,29 @@ public class Consulta extends javax.swing.JInternalFrame {
      */
     public Consulta() {
         initComponents();
+        atualizaTabela();
+        
     }
-
+    
+    public void atualizaTabela(){
+    DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+    ProdutoDAO dao = new ProdutoDAO();
+    
+    for(Produto p: dao.read()){
+    
+            modelo.addRow(new Object[]{
+            p.getCodigo(),
+            p.getNome(),
+            p.getQuantidade(),
+            p.getVolume(),
+            p.getPreço()
+    
+            });       
+    }
+    }
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -141,7 +164,7 @@ public class Consulta extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        DefaultTableModel modelo = new DefaultTableModel(); 
+    
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 

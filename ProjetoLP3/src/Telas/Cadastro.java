@@ -213,7 +213,6 @@ public class Cadastro extends javax.swing.JInternalFrame {
             produto.setPreço(Float.parseFloat(jTextField6.getText()));
             dao.create(produto);
             
-            JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
         }catch(NumberFormatException ex){
             JOptionPane.showMessageDialog(null, "Há informações erradas ou faltando.\nErro: "+ex);
         }
