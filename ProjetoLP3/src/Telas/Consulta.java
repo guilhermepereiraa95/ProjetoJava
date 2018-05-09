@@ -27,6 +27,7 @@ public class Consulta extends javax.swing.JInternalFrame {
     
     public void atualizaTabela(){
     DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+    modelo.setNumRows(0);
     ProdutoDAO dao = new ProdutoDAO();
     
     for(Produto p: dao.read()){

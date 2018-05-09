@@ -50,7 +50,7 @@ public class Alteração extends javax.swing.JInternalFrame {
         setTitle("Alteração de Produtos");
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icons8-selecionado-32.png"))); // NOI18N
-        jButton1.setText("Salvar");
+        jButton1.setText("Atualizar");
         jButton1.setActionCommand("Alterar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,7 +58,7 @@ public class Alteração extends javax.swing.JInternalFrame {
             }
         });
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jTextField1.setEnabled(false);
 
@@ -264,7 +264,8 @@ public class Alteração extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTextField7ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        Consulta consulta = null;
+        consulta.atualizaTabela();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
 
