@@ -127,10 +127,6 @@ public class Consulta extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(263, 263, 263)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(28, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -140,7 +136,10 @@ public class Consulta extends javax.swing.JInternalFrame {
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton2)
-                        .addGap(98, 98, 98))))
+                        .addGap(98, 98, 98))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(78, 78, 78))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -165,7 +164,22 @@ public class Consulta extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+    modelo.setNumRows(0);
+    ProdutoDAO dao = new ProdutoDAO();
+    String search = jTextField1.getText();
     
+    for(Produto p: dao.read(search)){
+    
+            modelo.addRow(new Object[]{
+            p.getCodigo(),
+            p.getNome(),
+            p.getQuantidade(),
+            p.getVolume(),
+            p.getPreço()
+    
+            });       
+    }
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 

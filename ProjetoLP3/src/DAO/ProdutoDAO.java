@@ -111,6 +111,40 @@ public class ProdutoDAO {
     
     }
     
+     public List<Produto> read(String id){
+        Connection con = Conexao.getConnection();
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        
+        List<Produto> produtos = new ArrayList<>();
+        
+        try {
+            stmt = con.prepareStatement("SELECT * FROM produto where nome like '%"+id+"%'");
+            rs = stmt.executeQuery();
+            
+            while(rs.next()){
+                
+                Produto produto = new Produto();
+                
+                produto.setCodigo(rs.getInt("codigo"));
+                produto.setNome(rs.getString("nome"));
+                produto.setQuantidade(rs.getInt("quantidade"));
+                produto.setVolume(rs.getFloat("volume"));
+                produto.setPreço(rs.getFloat("preco"));
+                
+                produtos.add(produto);
+            }
+            
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao acessar o BD" + ex);
+        }finally{
+            Conexao.closeConnection(con, stmt, rs);
+        }
+        
+        return produtos;
+    
+    }
+    
     
     public void delete(Produto p){
         Connection con = Conexao.getConnection();
