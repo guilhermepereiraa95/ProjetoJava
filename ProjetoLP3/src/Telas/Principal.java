@@ -46,7 +46,6 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
@@ -96,14 +95,6 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem1);
-
-        jMenuItem2.setText("Alteração");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem2);
 
         jMenuItem7.setText("Consulta");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
@@ -199,13 +190,6 @@ public class Principal extends javax.swing.JFrame {
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-         Alteração altera = new Alteração();
-         Principal.add(altera);
-         altera.setVisible(true);
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
-
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
         Encomenda encomenda = new Encomenda();
@@ -239,9 +223,9 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_PrincipalComponentShown
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        Consulta consulta = new Consulta();
-        Principal.add(consulta);
-        consulta.setVisible(true);  
+        Consulta c = new Consulta();
+        Principal.add(c);
+        c.setVisible(true);  
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
@@ -306,7 +290,6 @@ public class Principal extends javax.swing.JFrame {
     javax.swing.JMenu jMenu5;
     javax.swing.JMenuBar jMenuBar1;
     javax.swing.JMenuItem jMenuItem1;
-    javax.swing.JMenuItem jMenuItem2;
     javax.swing.JMenuItem jMenuItem3;
     javax.swing.JMenuItem jMenuItem4;
     javax.swing.JMenuItem jMenuItem5;
