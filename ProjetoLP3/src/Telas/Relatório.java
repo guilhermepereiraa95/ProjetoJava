@@ -95,7 +95,7 @@ public class Relatório extends javax.swing.JInternalFrame {
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addComponent(jButton2)
-                .addContainerGap(388, Short.MAX_VALUE))
+                .addContainerGap(392, Short.MAX_VALUE))
         );
 
         pack();

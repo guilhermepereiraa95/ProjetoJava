@@ -14,18 +14,18 @@ import java.sql.Date;
 public class CadastraVenda {
         
     private Date data;
-    private float subtotal, total, desconto, preço, volume;
-    private String nome, formaPagamento;
+    private float total, desconto, volume;
+    private String formaPagamento;
     private int codigo, quantidade;
 
-    public CadastraVenda(Date data, float subtotal, float total, float desconto, float preço, float volume, String nome, String formaPagamento, int codigo, int quantidade) {
+    public CadastraVenda(Date data, float total, float desconto, float volume, String formaPagamento, int codigo, int quantidade) {
         this.data = data;
-        this.subtotal = subtotal;
+       // this.subtotal = subtotal;
         this.total = total;
         this.desconto = desconto;
-        this.preço = preço;
+       // this.preço = preço;
         this.volume = volume;
-        this.nome = nome;
+       // this.nome = nome;
         this.formaPagamento = formaPagamento;
         this.codigo = codigo;
         this.quantidade = quantidade;
@@ -43,13 +43,13 @@ public class CadastraVenda {
         this.data = data;
     }
 
-    public float getSubtotal() {
-        return subtotal;
-    }
-
-    public void setSubtotal(float subtotal) {
-        this.subtotal = subtotal;
-    }
+//    public float getSubtotal() {
+//        return subtotal;
+//    }
+//
+//    public void setSubtotal(float subtotal) {
+//        this.subtotal = subtotal;
+//    }
 
     public float getTotal() {
         return total;
@@ -67,13 +67,13 @@ public class CadastraVenda {
         this.desconto = desconto;
     }
 
-    public float getPreço() {
-        return preço;
-    }
-
-    public void setPreço(float preço) {
-        this.preço = preço;
-    }
+//    public float getPreço() {
+//        return preço;
+//    }
+//
+//    public void setPreço(float preço) {
+//        this.preço = preço;
+//    }
 
     public float getVolume() {
         return volume;
@@ -83,13 +83,13 @@ public class CadastraVenda {
         this.volume = volume;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+//    public String getNome() {
+//        return nome;
+//    }
+//
+//    public void setNome(String nome) {
+//        this.nome = nome;
+//    }
 
     public String getFormaPagamento() {
         return formaPagamento;
